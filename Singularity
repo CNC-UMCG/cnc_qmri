@@ -99,15 +99,22 @@ echo 'export PATH=${ANTSPATH}:$PATH' >> $SINGULARITY_ENVIRONMENT
     rm -f /opt/spm${SPM_VERSION}_${SPM_REVISION}_Linux_${MATLAB_VERSION}.zip && \
     ${SPM_EXEC} function exit
     chmod 0755 ${SPM_EXEC}
+    
+    
+    #############################
+    # FSL
+    #############################
+    
+    apt-get install -y fsl-5.0-core
 
 
-#cleanup
-cd
-rm -rf ${ANTS_GIT_REPOSITORY}
-apt-get purge $BUILD_SOFTWARE -y
-apt-get autoclean -y
-apt-get autoremove -y
-rm -rf /var/lib/apt/lists/*
+    #cleanup
+    cd
+    rm -rf ${ANTS_GIT_REPOSITORY}
+    apt-get purge $BUILD_SOFTWARE -y
+    apt-get autoclean -y
+    apt-get autoremove -y
+    rm -rf /var/lib/apt/lists/*
 
 
 %test
