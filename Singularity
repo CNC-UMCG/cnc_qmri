@@ -116,16 +116,18 @@ From: CNC-UMCG/cnc_base
     apt-get autoremove -y
     rm -rf /var/lib/apt/lists/*
 
+
+    #############################
+    # FSL suite
+    #############################
+     
+    apt-get install -y fsl fsl-5.0-core fsleyes
+
     #############################
     # mrQ package
     #############################
     
     git clone https://github.com/mezera/mrQ.git
 
-%test
 
-# Is antsRegistration in its place and executable?
-export ANTS_HOME=/opt/ants/bin/
-if [ -d "$ANTS_HOME" ]; then
-   /opt/ants/bin/antsRegistration -h
-fi
+
