@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: CNC-UMCG/spm-fsl
+From: CNC-UMCG/cnc_spm-fsl
 
 %environment
 
