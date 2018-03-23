@@ -11,8 +11,8 @@ From: CNC-UMCG/cnc_spm-fsl
     export CONTAINER_SOFTWARE=""
     export ANTS_VERSION="v2.2.0"
     # Set paths to facilitate the build process.
-    export BUILDHOME="/opt"
-    export CLONE_DIR=/opt
+    export BUILDHOME="/usr/share"
+    export CLONE_DIR=/usr/share
     export ANTS_GIT_REPOSITORY=${CLONE_DIR}/ANTs
     export ANTS_GIT_REMOTE="https://github.com/stnava/ANTs.git"
     export ANTS_HOME=${BUILDHOME}/ants
