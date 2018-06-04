@@ -1,8 +1,8 @@
 PATH = getenv('PATH');
 
-setenv('PATH', [PATH ':/Users/marsman/Documents/NIC/mrQ/antsbin/bin']);
+setenv('PATH', [PATH ':/usr/share/ants/bin']);
 
-inputData_spgr.rawDir = '/Users/marsman/Documents/NIC/mrQ/data/P0434/nifti';
+inputData_spgr.rawDir = '/data/';
 %
 % A list of NIfTI names. (A unique string from the names is enough)
 inputData_spgr.name =  ...%{'0009' '0010' '0011' '0012'};
@@ -30,7 +30,9 @@ inputData_spgr.fieldStrength = [3 3 3 3];
 
 %% SEIR DATA %%%
 
-inputData_seir.rawDir = '/Users/marsman/Documents/NIC/mrQ/data/P0434/nifti';
+%inputData_seir.rawDir = '/Users/marsman/Documents/NIC/mrQ/data/P0434/nifti';
+inputData_seir.rawDir = '/data/nifti'
+
 %
 % A list of NIfTI names.  (A unique string from the names is enough)
 inputData_seir.name = { ...
@@ -52,6 +54,7 @@ inputData_seir.IT = [200 400 1200 2400];
 % RUN
 
 %mrQ_run('/Users/marsman/Documents/NIC/mrQ/data/P0434/nifti', '/Users/marsman/Documents/NIC/mrQ/data/P0434/output', inputData_spgr, inputData_seir,[]);
+%mrQ_run('/data/nifti', '/data/output', inputData_spgr, inputData_seir,[]);
 
 % RUN AFTER ERROR
 mrQ_run('/Users/marsman/Documents/NIC/mrQ/data/P0434/nifti', ...
