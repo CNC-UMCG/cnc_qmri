@@ -6,12 +6,21 @@ From: CNC-UMCG/cnc_spm-fsl
 
 %post
     apt-get install -y ants
- 
+
     #############################
-    # download spm12
+    # download vistasoft
     #############################
-    wget http://www.fil.ion.ucl.ac.uk/spm/download/restricted/eldorado/spm12.zip
-    unzip spm12.zip
+    git clone https://github.com/vistalab/vistasoft.git
+
+    #############################
+    # download spm
+    #############################
+    wget http://www.fil.ion.ucl.ac.uk/spm/download/restricted/idyll/spm8.zip
+    unzip spm8.zip
+    
+    # in case upgrading to spm12
+    #    wget http://www.fil.ion.ucl.ac.uk/spm/download/restricted/eldorado/spm12.zip
+    #    unzip spm12.zip
     
     #############################
     # mrQ package
